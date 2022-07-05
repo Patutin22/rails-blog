@@ -1,0 +1,12 @@
+<% if @post.errors.any? %>
+<div class="error_explanation">
+    <h5><%= pluralize(@post.errors.count, 'error') %> que han evitado que el asuario sea guardado: </h5>
+    <ul>
+    <% @post.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+    </ul>
+</div>
+<% else %>
+<h1> Felicitaciones, el post ha sido guardado!</h1>
+ <% end %>
